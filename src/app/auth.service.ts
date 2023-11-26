@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'https://ait-connect-api-c055b80e8a12.herokuapp.com';
   private tokenKey = 'keyJ';
   private userIdKey = 'user-id';
 

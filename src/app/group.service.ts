@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class GroupService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://https://ait-connect-api-c055b80e8a12.herokuapp.com';
   private groupsSubject = new BehaviorSubject<any[]>([]);
   groups$: Observable<any[]> = this.groupsSubject.asObservable();
 

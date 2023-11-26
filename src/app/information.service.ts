@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class InformationService {
-  private apiUrl = 'http://localhost:3000';// Update this with your API URL
+  private apiUrl = 'https://ait-connect-api-c055b80e8a12.herokuapp.com';// Update this with your API URL
 
   constructor(private http: HttpClient) {}
 
