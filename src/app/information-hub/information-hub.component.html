@@ -1,0 +1,46 @@
+<!-- information-hub/information-hub.component.html -->
+<div class="col-md-5">
+
+    <h3>Information Hub</h3>
+  
+    <form [formGroup]="informationForm" (ngSubmit)="submitInformation()">
+      <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" formControlName="title" />
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" formControlName="description" cols="10" rows="10"></textarea>
+      </div>
+      <!-- Add more form fields as needed -->
+  
+      <button type="submit">Add Information</button>
+      <div *ngIf="successMessage" class="alert alert-success">
+        {{ successMessage }}
+      </div>
+      
+    </form>
+
+</div>
+
+
+
+
+  
+  <div class="col-md-7">
+
+    <div *ngIf="informationList.length > 0">
+        <h4>Recent Information</h4>
+        <ul>
+          <li *ngFor="let info of informationList">
+            <strong>{{ info.title }}</strong>: {{ info.description }}
+          </li>
+        </ul>
+      </div>
+  </div>
+
+
+  
+
+  
+  

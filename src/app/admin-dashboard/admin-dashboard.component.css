@@ -1,0 +1,100 @@
+/* admin-dashboard.component.css */
+
+/* Overall container styling */
+:host {
+    display: block;
+    padding: 20px;
+    font-family: 'Arial', sans-serif; /* Change the font if needed */
+  }
+  
+  /* Group Creation Form styling */
+  form {
+    margin-bottom: 20px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    background-color: #8d938a;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* List of Existing Groups styling */
+  h3 {
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Optional: Hover effect on list items */
+  li:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+
+  .alert {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.col-md-5 {
+    background-color: #f9f2f2;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-right: 0px;
+    border-radius: 5px;
+}
+
+.col-md-6 h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.col-md-6 p {
+    font-size: 16px;
+    color: #666;
+}
+
+.btn{
+  background-color: #8e8c4e;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+  

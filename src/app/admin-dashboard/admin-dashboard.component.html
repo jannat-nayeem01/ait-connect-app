@@ -1,0 +1,93 @@
+<!-- admin-dashboard.component.html -->
+<div class="container">
+  <div *ngIf="successMessage" style="color: green; margin-top: 10px;">
+    {{ successMessage }}
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <div *ngIf="showCreateForm; else updateFormSection">
+        <!-- Create Form Section -->
+        <h2>Create New Group</h2>
+
+        <form [formGroup]="groupForm" (ngSubmit)="createGroup()">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" formControlName="name" />
+            <div *ngIf="groupForm.get('name')?.hasError('required')">Name is required.</div>
+            <div *ngIf="groupForm.get('name')?.hasError('maxlength')">Name cannot exceed 50 characters.</div>
+          </div>
+          <div>
+            <label for="description">Description:</label>
+            <textarea id="description" formControlName="description" rows="8"></textarea>
+            <div *ngIf="groupForm.get('description')?.hasError('required')">Description is required.</div>
+            <div *ngIf="groupForm.get('description')?.hasError('maxlength')">Description cannot exceed 255 characters.</div>
+          </div>
+          <button type="submit" [disabled]="groupForm.invalid">Create Group</button>
+        </form>
+      </div>
+      
+      <ng-template #updateFormSection>
+        <!-- Update Form Section -->
+        <div *ngIf="showUpdateForm">
+          <h2 style="color:red">Update Group</h2>
+            <form [formGroup]="updateForm" (ngSubmit)="onUpdateSubmit()">
+
+            <div>
+              <label for="updateName">Name:</label>
+              <input type="text" id="updateName" formControlName="name" />
+              <div *ngIf="updateForm.get('name')?.hasError('required')">Name is required.</div>
+              <div *ngIf="updateForm.get('name')?.hasError('maxlength')">Name cannot exceed 50 characters.</div>
+            </div>
+            <div>
+              <label for="updateDescription">Description:</label>
+              <textarea id="updateDescription" formControlName="description" rows="4"></textarea>
+              <div *ngIf="updateForm.get('description')?.hasError('required')">Description is required.</div>
+              <div *ngIf="updateForm.get('description')?.hasError('maxlength')">Description cannot exceed 255 characters.</div>
+            </div>
+            <button type="submit" [disabled]="!updateForm.valid" style="background-color: goldenrod;color:white">Update Group</button>
+          </form>
+        
+        </div>
+      </ng-template>
+      
+
+    </div>
+
+    
+    <div class="col-md-7">
+      <div *ngIf="groups.length > 0">
+        <h2 style="color:red">Existing Groups</h2>
+        <ul>
+          <li *ngFor="let group of groups let i = index" style="color:green">
+
+            {{ i + 1 }}. <h3>{{ group.name }}</h3>
+            <p>{{ group.description }}</p>
+            <button (click)="updateGroup(group)" class="btn">Update</button>
+            <button (click)="deleteGroup(group)" class="btn">Delete</button>
+
+          </li>
+        </ul>
+      </div>
+    
+    </div>
+
+  </div>
+
+
+</div>
+<div class="container">
+  <div class="row">
+
+
+    <app-information-hub></app-information-hub>
+  
+  
+  
+  </div>
+</div>
+
+
+
+
+
+  

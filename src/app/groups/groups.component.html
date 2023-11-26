@@ -1,0 +1,8 @@
+<!-- groups.component.html -->
+
+<div *ngFor="let group of groups">
+  <h2>{{ group.name }}</h2>
+  <p>{{ group.description }}</p>
+  <button (click)="handleJoinGroup(group._id)" [disabled]="isJoined[group._id]">Join Group</button>
+  <button (click)="handleLeaveGroup(group._id)" [disabled]="!isJoined[group._id]">Leave Group</button>
+</div>

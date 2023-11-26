@@ -1,0 +1,67 @@
+/* Header Styles */
+header {
+    background-color: rgb(21, 40, 23);
+    padding: 0;
+    border-bottom: 2px solid rgb(117, 103, 103);
+  }
+
+  
+  /* Navigation Links */
+  nav a {
+    color: white;
+    padding: 20px 80px;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: rgb(231, 241, 234);
+  }
+  
+  /* Container Styles */
+
+  
+  /* Navigation List Styles */
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  nav ul li {
+    padding: 2px 5px;
+  }
+  
+  nav ul li a {
+    padding: 1em;
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+  }
+  
+  /* Logo Styles */
+/* Add this CSS to style your logo */
+.logo {
+    max-height: 50px; /* Adjust the height as needed */
+    margin-right: 20px; /* Add some spacing between the logo and text */
+}
+.btn{
+    background-color: rgb(209, 222, 211);
+}
+.col-md-6 {
+  max-width: 600px; /* Set a maximum width for the content */
+  margin: 50px auto; /* Center the content horizontally and add space at the top and bottom */
+  padding: 20px; /* Add padding to the content */
+  border: 1px solid #ddd; /* Optional: Add a border for visual clarity */
+  background-color: #fff; /* Optional: Add a background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle lift effect */
+}
+
+h2 {
+  color: #333; /* Optional: Set the color of the heading */
+}
+
+/* Optional: Add more styles as needed for the content inside .col-md-6 */
+
+
+  

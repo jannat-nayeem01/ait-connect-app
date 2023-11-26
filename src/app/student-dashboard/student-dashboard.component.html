@@ -1,0 +1,45 @@
+<!-- student-dashboard.component.html -->
+
+<div class="container-fluid" style="margin-top: 20px;">
+  <div class="row">
+    <h2>Student Dashboard</h2>
+    
+    <!-- Left Sidebar (col-md-3) -->
+    <div class="col-md-3">
+      <ul class="list-group">
+        <li class="list-group-item" (click)="selectOption('groups')">Groups</li>
+        <li class="list-group-item" (click)="selectOption('information-hub')">Information Hub</li>
+        <li class="list-group-item" (click)="selectOption('feedback')">Feedback</li>
+        <!-- Add more list items as needed -->
+      </ul>
+    </div>
+
+    <!-- Right Content Area (col-md-8) -->
+    <div class="col-md-8">
+      <!-- Show groups component if the selected option is 'groups' -->
+      <app-groups
+        *ngIf="selectedOption === 'groups'"
+        [groups]="groups"
+        [isJoined]="isJoined"
+        (joinGroup)="joinGroup($event)"
+        (leaveGroup)="leaveGroup($event)"
+      ></app-groups>
+
+      <div *ngIf="selectedOption === 'information-hub'">
+        <div *ngFor="let info of informationList">
+          <h2>{{ info.title }}</h2>
+          <p>{{ info.description }}</p>
+
+        </div>
+        
+      </div>
+
+      <!-- Show feedback content if the selected option is 'feedback' -->
+      <div *ngIf="selectedOption === 'feedback'">
+        <p>Feedback Content Goes Here</p>
+      </div>
+
+      <!-- Add more sections for other options -->
+    </div>
+  </div>
+</div>

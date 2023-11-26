@@ -1,0 +1,31 @@
+.dashboard-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 15px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 20px;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+    color:red;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 15px;
+  }
+  li{
+    color:red;
+  }
+  .col-md-8{
+    border: 1px solid burlywood;
+  }
+  

@@ -1,0 +1,56 @@
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+      <div *ngIf="successMessage" class="alert alert-success">
+        {{ successMessage }}
+      </div>
+        <h2>Signup</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" formControlName="username" class="form-control" required>
+        <div *ngIf="signupForm.get('username')?.hasError('required') && signupForm.get('username')?.touched">
+            Username is required.
+          </div>
+          
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" class="form-control" required>
+        <div *ngIf="signupForm.get('email')?.hasError('required') && signupForm.get('email')?.touched">
+          Email is required.
+        </div>
+        <div *ngIf="signupForm.get('email')?.hasError('email') && signupForm.get('email')?.touched">
+          Please enter a valid email address.
+        </div>
+      </div>
+    
+  
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password" class="form-control" required>
+        <div *ngIf="signupForm.get('password')?.hasError('required') && signupForm.get('password')?.touched">
+          Password is required.
+        </div>
+      </div>
+      <div>
+        <label for="role">Role:</label>
+        <select id="role" formControlName="role" class="form-control">
+          <option value="admin">Admin</option>
+          <option value="student">Student</option>
+        </select>
+        <div *ngIf="signupForm.get('role')?.hasError('required') && signupForm.get('role')?.touched">
+          Role is required.
+        </div>
+      </div>
+    
+  <br/>
+      <button type="submit" [disabled]="signupForm.invalid">Signup</button>
+    </form>
+    </div>
+
+    <br/>
+    
+  </div>
+  </div>
+  

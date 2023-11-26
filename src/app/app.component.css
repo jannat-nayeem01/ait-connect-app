@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    flex: 1;
+}
+
+.footer {
+    background-color: #f8f9fa; /* Set the background color of the footer */
+    padding: 20px; /* Add padding to the footer */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.col-md-6 {
+    max-width: 600px; /* Set a maximum width for the content */
+    margin: 50px auto; /* Center the content horizontally and add space at the top and bottom */
+    padding: 20px; /* Add padding to the content */
+    border: 1px solid #ddd; /* Optional: Add a border for visual clarity */
+    background-color: #fff; /* Optional: Add a background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle lift effect */
+  }
+  
+  h2 {
+    color: #333; /* Optional: Set the color of the heading */
+  }

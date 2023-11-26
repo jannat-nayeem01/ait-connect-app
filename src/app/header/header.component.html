@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light navclass" style="background-color: #579354;">
+        <div class="px-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="../assets/aitlogo.jpg" alt="AIT Connect Logo" class="logo">
+                AIT Connect
+            </a>
+        </div>
+
+
+            <!-- Wrap the contents of the navbar in another container div. -->
+            <div class="collapse navbar-collapse container" id="navbarTogglerDemo02">
+                <ul class="navbar-nav">
+                    <!-- Use 'ml-auto' to right-align the navigation items. -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Student Groups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Information Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Chat and Messaging</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Feedback & Support</a>
+                    </li>
+
+                    <li  *ngIf="!authService.isLoggedIn()">
+                        <button class="btn" routerLink="/signup">Sign Up</button>
+                    </li>
+                    <li *ngIf="!authService.isLoggedIn()">
+                        <button class="btn" routerLink="/login">Login</button>
+                      </li>
+                      <li *ngIf="authService.isLoggedIn()">
+                        <button class="btn" (click)="logout()">Logout</button>
+                      </li>
+                      
+
+                      
+
+                </ul>
+
+
+                
+            </div>
+
+    </nav>
+</header>
+<!-- -->
+
+<!-- Make sure to include the necessary JavaScript files for Bootstrap. -->
+</body>
+</html>
